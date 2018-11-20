@@ -1,1 +1,8 @@
 /* PHASE 2: Notifications */
+.badge {
+  display: inline;
+  font-size: 14px;
+  padding: 1px 6px;
+  background: #000;
+  border-radius: 50%;
+}
