@@ -1,0 +1,4 @@
+  [1m[35m (544.6ms)[0m  [1m[35mCREATE DATABASE "reddit_on_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (252.1ms)[0m  [1m[35mCREATE DATABASE "reddit_on_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
