@@ -5,6 +5,14 @@ class User < ApplicationRecord
   attr_reader :password
   after_initialize :ensure_session_token
   
+  has_many :subs,
+    foreign_key: :user_id,
+    class_name: :Sub
+    
+  has_many :posts,
+    foreign_key: :author_id,
+    class_name: :Post
+  
   def reset_session_token!
     self.session_token = SecureRandom.urlsafe_base64
     self.save!
@@ -31,3 +39,4 @@ class User < ApplicationRecord
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
   end
+end

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save 
       login!(@user)
-      #probably redirect_to something
+      redirect_to subs_url
     else 
       flash[:errors] = @user.errors.full_messages
       render :new
