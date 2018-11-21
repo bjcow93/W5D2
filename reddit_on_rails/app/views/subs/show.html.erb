@@ -1,0 +1,19 @@
+<h1>Welcome to <%= @sub.title %></h1>
+
+
+<form action="<%= new_post_url %>" method="get">
+  <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+  <input type="hidden" name="sub_id" value="<%= @sub.id %>">
+  <input type="submit" name="" value="New Post">
+</form>
+
+<ul>
+  <!-- would have to add all the crossposts here -->
+  <% @sub.posts.each do |post| %>
+    <li><a href="<%=post_url(post)%>"><%= post.title %></a></li>
+  <% end %>
+</ul>
+
+
+
+

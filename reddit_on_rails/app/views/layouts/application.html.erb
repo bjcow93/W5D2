@@ -11,6 +11,14 @@
   
   <body>
     
+    <% if flash[:errors] %>
+      <ul>
+        <% flash[:errors].each do |error| %>
+          <li><span style="color:red"><%= error %></span></li>
+        <% end %>
+      </ul>
+    <% end %>
+    
     <% if logged_in? %>
       <form action="<%= session_url %>" method="post">
         <input type="hidden" name="_method" value="delete">

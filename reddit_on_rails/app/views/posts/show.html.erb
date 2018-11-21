@@ -1,0 +1,13 @@
+<h1> <%= @post.title %> </h1>
+<br>
+<%= @post.content %>
+<br>
+<%= @post.url %>
+<br>
+
+<a href="<%= sub_url(@post.sub_id) %>">Back to Sub!</a>
+
+<form action="<%= edit_post_url(@post) %>" method="get">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="submit" name="" value="Edit Post">
+</form>
